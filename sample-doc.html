@@ -1,0 +1,192 @@
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<style>
+body {
+display: flex;
+font-family: 'Lato', sans-serif;
+font-size: 16px;
+width: 100%;
+max-width: 1080px;
+margin: auto;
+}
+
+.nav-container {
+width: 35%;
+margin-top: 10vh;
+}
+.nav {
+position:fixed;
+}
+.nav a {
+display: block;
+margin: .5em;
+}
+
+.content {
+margin: 5vh 0;
+}
+
+code {
+border: 1px solid #ddd;
+border-radius: 4px;
+display: block;
+padding: 1em;
+width: 100%;
+max-width: 600px;
+}
+pre {
+margin: 0;
+}
+
+button {
+border-radius: 4px;
+font-size: 16px;
+font-weight: 400;
+padding: .5em 1em;
+margin: 1em;
+}
+
+button.primary {
+background-color: #0062cc;
+border: 1px solid #0062cc;
+color: #fff;
+}
+
+button.secondary {
+background-color: transparent;
+border: 1px solid #0062cc;
+color: #0062cc;
+}
+
+.button-group {
+display: flex;
+margin: 1em;
+}
+.button-group button {
+margin: 0;
+border-radius: 0;
+border-left: 1px solid #fff;
+border-right: 0;
+box-sizing: border-box;
+}
+.button-group button:first-child {
+border-radius: 4px 0 0 4px;
+}
+.button-group button:last-child {
+border-radius: 0 4px 4px 0;
+border-right: 1px solid #0062cc;
+}
+
+@media (max-device-width: 768px) {
+body {
+display: block;
+}
+.nav-container {
+display: none;
+}
+.content {
+padding: 1em;
+margin: 0;
+}
+}
+</style>
+</head>
+
+<body>
+<div class="nav-container">
+<div class="nav">
+<b>Components</b>
+<a href="#">Buttons</a>
+<a href="#">Cards</a>
+<a href="#">Checkboxes</a>
+<a href="#">Containers</a>
+</div>
+</div>
+
+<div class="content">
+<h1>Buttons</h1>
+<p>Buttons are interactive components that allow users to take action with a single click or tap.</p>
+
+
+<h2>Usage</h2>
+<p>Buttons should be placed with associated prompts or related information, easily discoverable on the screen, and not directly adjacent or intersecting another interactive component.</p>
+<p>Examples of common button actions:</p>
+<ul>
+<li>Important calls to action</li>
+<li>Form submission</li>
+<li>Affirmation or dismissal of a modal window</li>
+<li>Navigation within another component</li>
+</ul>
+
+<h2>Basic Buttons</h2>
+<p>There are two main style variants for basic buttons: solid (primary) and outlined (secondary). All basic buttons should include the basic styling:</p>
+<code>
+<pre>
+button {
+    border-radius: 4px;
+    font-family: ‘Lato’, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+</pre>
+</code>
+
+<h3>Solid Buttons</h3>
+<p>Solid buttons have a solid fill and no border. They should be used for primary or affirmative actions.</p>
+<button class="primary">Action</button>
+<code>
+&lt;button class="primary"&gt;Action&lt;/button&gt;
+</code>
+
+<h3>Outlined Buttons</h3>
+<p>Outlined buttons are transparent or have no fill with a solid border. They should be used for dismissive or secondary actions.</p>
+<button class="secondary">Action</button>
+<code>
+&lt;button class="secondary"&gt;Action&lt;/button&gt;
+</code>
+
+<h2>Button Variations</h2>
+<p>Basic button styles can be further modified for certain accommodations.</p>
+	
+<h3>Icon-and-Label Buttons</h3>
+<p>Button labels can be supported with an added icon to add emphasis or allow users to quickly recognize the button’s intended action.</p>
+<button class="primary icon-and-label"><span class=”[icon-name]” /> Action</button>
+<code>
+&lt;button class="primary icon-and-label"&gt;&lt;span class="[icon-name]" /&gt; Action&lt;/button&gt;
+</code>
+
+<h3>Icon-Only Buttons</h3>
+<p>Icon-only buttons contain only a single icon in place of the button label. They should be used where space is limited, and the icon should quickly and clearly communicate the proceeding action.</p>
+<p>*Accessibility note: Icon-only buttons must have an aria-label to describe the action.</p>
+<button class="secondary icon-only" aria-label="Action"><span class="[icon-name]" />&hellip;</button>
+<code>
+&lt;button class="secondary icon-only" aria-label="Action"&gt;&lt;span class="[icon-name]" /&gt;&lt;/button&gt;
+</code>
+
+<h3>Grouped Buttons</h3>
+<p>Buttons can be grouped if their actions are closely related. All buttons within a group should use the same style variant. The style variant can be indicated in the parent element, and each button within the group will inherit the style of the parent element. </p>
+<p>*Accessibility note: Consideration for horizontal spacing should be taken to prevent overflow, as grouped buttons should not wrap and may extend beyond view.</p>
+<div class="button-group primary">
+<button class="primary">Action</button>
+<button class="primary">Action</button>
+<button class="primary">Action</button>
+</div>
+<code>
+<pre>
+&lt;div class="button-group primary"&gt;
+    &lt;button&gt;Action&lt;/button&gt;
+    &lt;button&gt;Action&lt;/button&gt;
+    &lt;button&gt;Action&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+</code>
+
+<h2>Colors</h2>
+<p>Buttons may only be implemented in the accepted brand colors along with the extended color palette for alerts.</p>
+<p><br><br></p>
+</div>
+</body>
+</html>
