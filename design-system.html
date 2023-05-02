@@ -2,20 +2,21 @@
 <head>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap" rel="stylesheet">
+
 <style>
 body {
 display: flex;
 font-family: 'Lato', sans-serif;
 font-size: 16px;
 width: 100%;
-max-width: 1080px;
+max-width: 850px;
 margin: auto;
 }
 
 .nav-container {
-width: 35%;
 margin-top: 10vh;
+width: 40vw;
 }
 .nav {
 position:fixed;
@@ -27,6 +28,10 @@ margin: .5em;
 
 .content {
 margin: 5vh 0;
+}
+
+p, li {
+line-height: 1.5em;
 }
 
 code {
@@ -80,7 +85,7 @@ border-radius: 0 4px 4px 0;
 border-right: 1px solid #0062cc;
 }
 
-@media (max-device-width: 768px) {
+@media screen and (max-device-width:912px), screen and (max-width: 768px) {
 body {
 display: block;
 }
@@ -149,11 +154,10 @@ button {
 </code>
 
 <h2>Button Variations</h2>
-<p>Basic button styles can be further modified for certain accommodations.</p>
-	
+
 <h3>Icon-and-Label Buttons</h3>
 <p>Button labels can be supported with an added icon to add emphasis or allow users to quickly recognize the button’s intended action.</p>
-<button class="solid icon-and-label"><span class=”[icon-name]” /> Action</button>
+<button class="solid icon-and-label"><span class=”[icon-name]” />+ Action</button>
 <code>
 &lt;button class="solid icon-and-label"&gt;&lt;span class="[icon-name]" /&gt; Action&lt;/button&gt;
 </code>
